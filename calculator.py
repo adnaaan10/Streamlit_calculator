@@ -13,15 +13,21 @@ operations=st.selectbox("Select Operation",["Add","Substract","Multiplication","
 
 
 
+
 if operations=="Add":
-    st.success(num1+num2)
+    if st.button("submit"):
+        st.success(num1+num2)
 elif operations=="Substract":
-    st.success(num1-num2)
+    if st.button("submit"):
+        st.success(num1-num2)
 elif operations=="Multiplication":
-    st.success(num1*num2)
+    if st.button("submit"):
+        st.success(num1*num2)
 elif operations=="Divide":
     if num2!=0:
-        st.success(num1/num2)
+        if st.button("submit"):
+            st.success(num1/num2)
     else:
-        st.error("Denominator Should not be Zero")
+        if st.button("submit"):
+            st.error("Denominator Should not be Zero")
 
